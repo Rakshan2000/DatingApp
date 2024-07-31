@@ -1,0 +1,43 @@
+To resolve the NU1101: Unable to find package Swashbuckle.AspNetCore error in Visual Studio Code, follow these steps:
+
+Check NuGet Package Source Configuration:
+Ensure that your NuGet package sources are correctly configured.
+
+Open a terminal in Visual Studio Code.
+Use the following command to list your current package sources:
+sh
+Copy code
+dotnet nuget list source
+Ensure that nuget.org is listed. If not, add it using:
+sh
+Copy code
+dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
+Add Swashbuckle.AspNetCore Package:
+Add the Swashbuckle.AspNetCore package to your project.
+
+In the terminal, navigate to your project directory.
+Use the following command to add the package:
+sh
+Copy code
+dotnet add package Swashbuckle.AspNetCore
+Restore Packages:
+Restore the packages for your project to ensure all dependencies are downloaded.
+
+Run the following command in the terminal:
+sh
+Copy code
+dotnet restore
+Check for typos:
+Make sure there are no typos in the package name. The correct package name is Swashbuckle.AspNetCore.
+
+Check Internet Connection:
+Ensure that you have an active internet connection since NuGet needs to fetch the package from the online source.
+
+Clear NuGet Cache:
+Sometimes, clearing the NuGet cache can resolve issues with finding packages.
+
+Run the following command to clear the cache:
+sh
+Copy code
+dotnet nuget locals all --clear
+After performing these steps, try restoring the packages again with dotnet restore and check if the issue is resolved.

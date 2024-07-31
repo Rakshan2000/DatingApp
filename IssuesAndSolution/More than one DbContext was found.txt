@@ -1,0 +1,10 @@
+Error -
+More than one DbContext was found. Specify which one to use. Use the '-Context' parameter 
+for PowerShell commands and the '--context' parameter for dotnet commands.
+Reason :
+When you encounter the error "More than one DbContext was found. Specify which one to use," it means that your application contains multiple DbContext classes, 
+and the tools are unable to determine which one to use automatically. To resolve this, you need to specify which DbContext to use in your command.
+
+
+Solution :
+ dotnet ef migrations add InitalCreate -c DataContext -o Data/Migrations
