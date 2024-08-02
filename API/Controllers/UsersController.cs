@@ -7,7 +7,7 @@ namespace API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class UserControllers(DataContext context) : ControllerBase
+public class UsersController(DataContext context) : ControllerBase
 {
     
 
